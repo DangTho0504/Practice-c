@@ -35,7 +35,7 @@ for (int j = 1; j <= n; j++)
     sum += gt;
 }
 cout << endl << "S = " << sum << endl;
-//kiem tra số hoàn hảo,
+//kiem tra số hoàn hảo
 int add = 0 ;
 
 for (int i = 1; i < n; i++)
@@ -47,13 +47,29 @@ for (int i = 1; i < n; i++)
 }
 if (add == n)
 {
-    cout << "so hoan hao";
+    cout << n << "so hoan hao" << endl;
 } else {
-    cout << " so khong hoan hao";
+    cout << n << "so khong hoan hao" << endl;
+}
+
+// kiểm tra số nguyên tố ( số>1, chỉ chia hết cho 1 và chính nó)
+if ( n % 1 ==0 && n % n ==0 )
+{
+    cout << n << " so nguyen to";
+}
+else
+{
+    cout << n << " khong phai so nguyen to";
 }
 
 
 
+  
 
-  return 0 ;
+
+
+
+
+
+return 0 ;
 }

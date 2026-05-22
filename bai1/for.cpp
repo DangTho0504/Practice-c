@@ -10,6 +10,7 @@ int tong(int a, int b) {
 int main() {
 
     cout << tong(5, 3);
+int k;
 
     return 0;
 }

@@ -1,16 +1,8 @@
-#include <iostream>
+#include <iostream>>
 using namespace std;
+int main () {
 
-int tong(int a, int b) {
-
-    return a + b;
-
-}
-
-int main() {
-
-    cout << tong(5, 3);
-int k;
-
-    return 0;
+ 
+ 
+    return 0 ;
 }

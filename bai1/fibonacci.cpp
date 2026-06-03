@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+<<<<<<< HEAD
 
 int main()
 {
@@ -48,4 +49,11 @@ int main()
     }
 
     return 0;
+=======
+int main()
+{
+    int n;
+    cout << "nhap n= ";
+    cin >> n;
+>>>>>>> 5a40200 (jj)
 }

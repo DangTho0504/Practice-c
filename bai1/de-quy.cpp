@@ -74,6 +74,7 @@ int main()
     }
     // nhap x coi co nam trong fibonacci khong va o vi tri thu may
     int x;
+    bool found = false;
     cout << endl
          << "Nhap x = ";
     cin >> x;
@@ -82,14 +83,18 @@ int main()
         int c = a + b;
         if (x == c)
         {
-            cout << x << " co nam trong day Fibonacci";
-        }else
-        {
-            cout << x << " khong nam trong day Fibonacci";
+            cout << x << " co nam trong day Fibonacci\n";
+            cout << x << " o vi tri " << i;
+            found = true;
+            break;
         }
         a = b;
         b = c;
     }
-
+    if (!found)
+    {
+       cout << x << " Khong nam trong day fibonacci";
+    }
+    
     return 0;
 }

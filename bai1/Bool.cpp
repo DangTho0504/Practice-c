@@ -1,51 +1,72 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    int n;
-    // 1. Vòng lặp bắt nhập lại nếu n <= 0
-    do
+bool soChan(int n){
+    if ( n % 2 == 0)
     {
-        cout << "Nhap n: ";
-        cin >> n;
-        if (n <= 0)
-        {
-            cout << "Vui long nhap lai vì n < 0.\n";
-        }
-    } while (n <= 0);
-    // 2. Kiểm tra số nguyên tố ( n > 1, n chia hết cho chính nó)
-    bool soNguyenTo = true;
-    if (n == 1)
-    {
-        soNguyenTo = false;
+        return true;
     }
+    return false;
+}
 
-    for (int i = 2; i < n; i++)
+bool soNguyenTo(int n){
+    if ( n <= 1)
     {
-        if (n % i == 0)
-        {
-            soNguyenTo = false;
-        }
+        return false;
     }
-    if (soNguyenTo)
+   for (int i = 2; i < n; i++)
+   {
+    if ( n % i == 0)
     {
-        cout << n << " la so nguyen to";
-    } else {
-        cout << n << " khong phai so nguyen to";
+        return false;
     }
-// 3. Tìm ước chung lớn nhất của a , b
-int a, b;
-cout << "nhap a : ";
-cin >> a;
-cout << "nhap b : ";
-cin >> b;
-    for (int i = 0; i < a; i++)
+    }
+   return true; 
+}
+
+void nhapMang(int M[], int n){
+    for (int i = 0; i < n; i++)
     {
-       if (a % i == 0)
-       {
+        cout << "M [" << i << "] = ";
+        cin >> M[i];
+    }
+}
+void xuatMang(int M[], int n){
+for (int i = 0; i < n; i++)
+    {
+        cout << M[i] << " ";
+    }
+}
+int maxMang(int M[], int n){
+    int max = M [0];
+    for (int i = 0; i < n; i++)
+    {
         
-       }
-       
     }
     
+}
+int main(){
+    int n;
+    int M[100];
+    cout <<"Nhap n = ";
+    cin >> n;
+    if (soChan(n))
+    {
+        cout << n << " so chan\n";
+    } else {
+        cout << n << " so le\n";
+    }
+   
+    if (soNguyenTo(n))
+    {
+        cout << n << " la so nguyen to\n";
+    }
+    else
+    {
+        cout << n << " khong la so nguyen to\n";
+    }
+cout << "Nhap mang:\n";
+nhapMang(M,n);
+cout << "Mang da nhap: ";
+xuatMang(M,n);
+    return 0 ;
 }

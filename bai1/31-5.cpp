@@ -51,6 +51,7 @@ void hienThiSanPham(SanPham sp[], int n)
              << "\t\t"
              << sp[i].gia
              << endl;
+             
     }
 }
 

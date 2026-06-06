@@ -1,28 +1,27 @@
 #include <iostream>
 using namespace std;
-<<<<<<< HEAD
-
-=======
-void inDayFibonacci(int n){
-    cout << "Day Fibonacci: ";
+void inDayFibonacci(int x){
     int a = 0;
     int b = 1;
-    for (int i = 0; i <=n; i++)
+    for (int i = 0; i < x; i++)
     {
         cout << a << " ";
-        int c = a + b ;
-        a = b ;
-        b = c ;
+        int c = a+b;
+        a = b;
+        b = c;
     }
-    cout << endl;
 }
->>>>>>> 3fb53eb (them note)
 int main()
 {
-    int n;
+    int x;
+    cout << "Nhap x = ";
+    cin >> x;
+    cout << "Day Fibonacci: ";
+    inDayFibonacci(x);
+    cout << endl;
+     int n;
     cout << "Nhap n = ";
     cin >> n;
-    inDayFibonacci(n);
     bool fibonacci = false;
     int a = 0;
     int b = 1;
@@ -54,13 +53,15 @@ int main()
         a = b;
         b = c;
     }
-
+    cout << boolalpha;
     if (fibonacci)
     {
+        cout << fibonacci << "\n";
         cout << n << " co trong day Fibonacci";
     }
     else
     {
+        cout << fibonacci << "\n";
         cout << "Trong day Fibonacci khong co " << n;
     }
 

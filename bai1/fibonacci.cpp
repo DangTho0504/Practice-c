@@ -1,5 +1,29 @@
 #include <iostream>
 using namespace std;
+
+int findIndexFibonacci(int value) {
+    int a = 0;
+    int b = 1;
+    if (value == 0) return 0;
+    
+    if (value == 1) return 1;
+    
+    for (int i = 0; i < 1000; i++)
+    {
+        int c = a+b;
+        if (value == c )
+        {
+          return i;
+        }
+        a = b;
+        b = c;
+    }
+    return -1;
+}
+// 
+bool isFibonacciNumber(int number){
+
+}
 void inDayFibonacci(int x){
     int a = 0;
     int b = 1;
@@ -19,45 +43,15 @@ int main()
     cout << "Day Fibonacci: ";
     inDayFibonacci(x);
     cout << endl;
-     int n;
-    cout << "Nhap n = ";
-    cin >> n;
+    int value;
+    cout << "Nhap gia tri = ";
+    cin >> value;
     bool fibonacci = false;
-    int a = 0;
-    int b = 1;
-    if (n == 0)
-    {
-        fibonacci = true;
-        cout << "0 o vi tri thu 0\n";
-    }
-    else if (n == 1)
-    {
-        fibonacci = true;
-        cout << "1 o vi tri thu 1\n";
-    }
-
-    for (int i = 2; i <= 1000; i++)
-    {
-        int c = a + b;
-
-        if (n == c)
-        {
-            fibonacci = true;
-            cout << n << " o vi tri thu " << i << endl;
-            break;
-        }
-        if (c > n)
-        {
-            break;
-        }
-        a = b;
-        b = c;
-    }
     cout << boolalpha;
     if (fibonacci)
     {
         cout << fibonacci << "\n";
-        cout << n << " co trong day Fibonacci";
+        cout << value << " co trong day Fibonacci";
     }
     else
     {
@@ -65,5 +59,15 @@ int main()
         cout << "Trong day Fibonacci khong co " << n;
     }
 
-    return 0;
+    return 0; // 0, False, -1 ,
 }
+
+// find Index 
+// hàm trả int, 
+
+/// int findIndexFibonacci() {}
+
+
+
+
+
